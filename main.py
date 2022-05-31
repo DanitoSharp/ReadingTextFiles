@@ -52,8 +52,10 @@ def count_words():
     # picking each word and storing them as a key and the
     # count as the value.
     for word in words:
-
-        Dic[word] = words.count(word)
+        if(word in Dic):
+            continue
+        else:
+            Dic[word] = words.count(word)
     
     #Returning the Dictionary
     return Dic
